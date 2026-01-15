@@ -1,0 +1,9 @@
+.icon svg {
+  width: 60px;  /* ここで好きなサイズに調整 */
+  height: auto;
+}
+
+/* マウスを乗せた時に色を変えるといった操作もCSSで可能です */
+.icon svg:hover g {
+  fill: #ff0000;
+}
