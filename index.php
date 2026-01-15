@@ -198,7 +198,7 @@
   <!-- Footer -->
   <footer class="mt-12 border-t border-[#e5e7eb]">
     <div class="mx-auto max-w-7xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="text-sm text-[#11151b]">©2025 takemoto All rights reserved.</div>
+      <div class="text-sm text-[#11151b]">©2025 All rights reserved.</div>
 
       <div class="flex items-center gap-4">
         <a href="#" class="text-[#232b37] hover:underline">Qiita</a>
