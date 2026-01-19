@@ -4,206 +4,401 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ポートフォリオ — サンプル</title>
+  <title>MyPortfolioSite</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="antialiased" style="background-color:#ffffff;color:#11151b;">
 
-  <!-- Header (transparent) -->
-  <header class="absolute inset-x-0 top-0 z-30">
-    <div class="mx-auto max-w-7xl px-6 py-6">
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-40 bg-white/80 backdrop-blur-md border-b border-blue-100/50 shadow-sm">
+    <div class="mx-auto max-w-7xl px-6 py-4">
       <nav class="flex items-center justify-between">
-        <a href="#" class="text-lg font-bold tracking-tight">MyPortfolio</a>
+        <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">MyPortfolio</a>
 
-        <div class="space-x-6">
-          <a href="#works" class="text-[#232b37] hover:text-[#11151b]">Works</a>
-          <a href="#contact" class="text-[#232b37] hover:text-[#11151b]">Contact</a>
+        <div class="space-x-8">
+          <a href="#works" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Works</a>
+          <a href="#service" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Service</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- Hero: full-width, 80% viewport height -->
-  <main class="pt-24">
-    <section class="relative w-full h-[80vh]">
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="w-full h-full bg-cover bg-center flex justify-center items-center">
-          <img src="images/james-harrison-UVMPVIRCF5w-unsplash.jpg" alt="" class="blur object-cover w-full h-full">
-        </div>
+  <!-- Hero Section with Profile -->
+  <main>
+    <!-- Modern Pastel Hero Section -->
+    <section class="relative w-full min-h-screen bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 flex items-center justify-center pt-24 pb-16">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-300 to-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-10 w-80 h-80 bg-gradient-to-tr from-purple-200 to-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
       </div>
 
-      <div class="relative z-10 flex h-full items-center justify-center px-6">
-        <div class="text-center max-w-3xl text-white">
-          <p class="mt-4 text-lg">シンプルでモダンなインターフェースを得意とし、使いやすさと美しさを両立したプロダクトを作ります。</p>
+      <div class="relative z-10">
+        <div class="mx-auto max-w-6xl px-6">
+          <!-- Main Content Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center">
+            
+            <!-- Left Side: Text Content -->
+            <div class="flex flex-col justify-center">
+              <div class="mb-8">
+                <h1 class="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4">
+                  Web開発受託と<br />
+                  <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">未経験エンジニア向け</span><br />
+                  コーチング
+                </h1>
+                <p class="text-xl text-gray-700 mt-6 leading-relaxed">
+                  モダンで使いやすいWebアプリケーションの開発から、エンジニアとしてのキャリア支援まで。あなたの目標達成をサポートします。
+                </p>
+              </div>
 
-          <!-- <div class="mt-8 flex items-center justify-center gap-4">
-            <a href="#works" class="inline-flex items-center justify-center rounded-lg bg-white/10 px-5 py-3 text-white font-semibold hover:bg-white/20">Works</a>
-            <a href="#contact" class="inline-flex items-center justify-center rounded-lg border border-white/20 px-5 py-3 text-white hover:bg-white/5">Contact</a>
-          </div> -->
+              <!-- CTA Buttons -->
+              <div class="flex gap-4 flex-wrap mt-8">
+                <a href="#works" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-8 py-3 hover:shadow-lg transition-shadow">
+                  Works を見る
+                </a>
+                <a href="#contact" class="inline-flex items-center justify-center rounded-full border-2 border-blue-500 text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors">
+                  お問い合わせ
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Side: Profile Card -->
+            <div class="flex justify-center lg:justify-end">
+              <div class="w-full max-w-sm">
+                <!-- Profile Card -->
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden backdrop-blur-md bg-opacity-95 p-8">
+                  
+                  <!-- Profile Image -->
+                  <div class="flex justify-center mb-6">
+                    <div class="relative">
+                      <div class="profile-image w-40 h-40 rounded-full overflow-hidden border-4 border-gradient-to-br from-blue-400 to-purple-400 shadow-lg">
+                        <img src="images/googlemegane.png" alt="Takemoto Yuya" class="w-full h-full object-cover">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Profile Info -->
+                  <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Takemoto Yuya</h2>
+                    <p class="text-blue-600 font-semibold mb-4">📍 Osaka, Japan</p>
+                    
+                    <!-- Bio -->
+                    <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                      Web開発を専門とするエンジニア。Reactやその他のモダンフレームワークを使用した開発を得意としています。未経験者のコーチングも積極的に行っています。
+                    </p>
+
+                    <!-- Skills Tags -->
+                    <div class="space-y-4">
+                      <h3 class="text-sm font-semibold text-gray-800 mb-3">Skills</h3>
+                      <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-50 text-blue-700 rounded-full text-xs font-semibold">HTML</span>
+                        <span class="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-50 text-blue-700 rounded-full text-xs font-semibold">CSS</span>
+                        <span class="inline-block px-4 py-2 bg-gradient-to-r from-yellow-100 to-yellow-50 text-yellow-700 rounded-full text-xs font-semibold">JavaScript</span>
+                        <span class="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-purple-50 text-purple-700 rounded-full text-xs font-semibold">PHP</span>
+                        <span class="inline-block px-4 py-2 bg-gradient-to-r from-red-100 to-red-50 text-red-700 rounded-full text-xs font-semibold">Git</span>
+                        <span class="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-50 text-blue-700 rounded-full text-xs font-semibold">WordPress</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Profile -->
-    <section id="profile" class="mx-auto max-w-5xl px-6 py-16">
-      <div class="bg-[#f8fafc] rounded-2xl p-8 shadow-lg border-4 border-blue-500">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-          <div class="md:col-span-2">
-            <h2 class="text-4xl font-bold">プロフィール</h2>
-            <p class="mt-4 text-[#11151b]">Web開発を行っています。React / Laravel を用いたモダンな開発を得意としています。</p>
-            <h3 class="mt-6 font-semibold">Experience</h3>
-            <ul class="mt-2 list-disc list-inside text-[#11151b]">
-              <li>Webアプリケーションの設計・実装</li>
-              <li>アクセシビリティとパフォーマンス最適化</li>
-              <li>チームでの開発とコードレビュー</li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col gap-4">
-            <!-- right column intentionally left for layout balance or later content -->
-          </div>
-        </div>
-      </div>
-    </section>
-    
     <!-- Works -->
-    <section id="works" class="mx-auto max-w-7xl px-6 py-16">
-      <h2 class="text-2xl font-bold text-center">Works</h2>
-      <p class="mt-3 text-center text-[#11151b]">最近の制作事例を３つ掲載しています。</p>
+    <section id="works" class="relative w-full bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+        <div class="absolute bottom-0 right-10 w-80 h-80 bg-gradient-to-tl from-blue-300 to-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+      </div>
 
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <?php for ($i = 1; $i <= 3; $i++): ?>
-          <article class="rounded-xl overflow-hidden bg-[#f8fafc] shadow-md">
-            <div class="h-40 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/800x600/?web,design&sig={{ $i }}')"></div>
-            <div class="p-5">
-              <h3 class="font-semibold">Project</h3>
-              <p class="mt-2 text-sm text-[#11151b]">短い説明文：UI設計とフロントエンド実装を担当したサンプルプロジェクトです。</p>
-              <div class="mt-4 flex items-center justify-between">
-                <div class="text-xs text-[#11151b]">#UI #Frontend</div>
-                <a href="#" class="text-sm text-[#232b37] hover:underline">View</a>
+      <div class="relative z-10 mx-auto max-w-7xl px-6">
+        <div class="mb-16">
+          <h2 class="text-4xl font-bold text-gray-800">Works</h2>
+          <p class="mt-4 text-lg text-gray-600">最近の制作事例を３つ掲載しています。</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-blue-100/50">
+            <div class="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" style="background-image: url('https://source.unsplash.com/800x600/?web,design&sig=1');"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800">Etude</h3>
+              <p class="mt-3 text-sm text-gray-600 leading-relaxed">WordPressのオリジナルテーマで開発したテックブログ</p>
+              <div class="mt-6 flex items-center justify-between">
+                <div class="flex gap-2 flex-wrap">
+                  <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">WordPress</span>
+                  <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">Bootstrap</span>
+                </div>
+                <a href="https://blob.take006.com" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-purple-600 transition-colors">View →</a>
               </div>
             </div>
           </article>
-        <?php endfor; ?>
+          <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-blue-100/50">
+            <div class="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" style="background-image: url('https://source.unsplash.com/800x600/?web,design&sig=2');"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800">Learning-record</h3>
+              <p class="mt-3 text-sm text-gray-600 leading-relaxed">個人用の学習記録サイト</p>
+              <div class="mt-6 flex items-center justify-between">
+                <div class="flex gap-2 flex-wrap">
+                  <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">PHP</span>
+                  <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Tailwind</span>
+                </div>
+                <a href="https://blob.take006.com" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-purple-600 transition-colors">View →</a>
+              </div>
+            </div>
+          </article>
+          <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-blue-100/50">
+            <div class="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" style="background-image: url('https://source.unsplash.com/800x600/?web,design&sig=3');"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800">Portfolio</h3>
+              <p class="mt-3 text-sm text-gray-600 leading-relaxed">モダンなポートフォリオサイト</p>
+              <div class="mt-6 flex items-center justify-between">
+                <div class="flex gap-2 flex-wrap">
+                  <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold">React</span>
+                  <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">TypeScript</span>
+                </div>
+                <a href="#" class="text-sm font-semibold text-blue-600 hover:text-purple-600 transition-colors">View →</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
-    <section id="works" class="mx-auto max-w-7xl px-6 py-16">
-            <div class="mt-6">
-      <h2 class="text-2xl font-bold text-center">Skills</h2>
-              <div class="mt-3 grid grid-cols-1 md:grid-cols-6 gap-4">
-                <div class="icon">
-                  <svg viewBox="0 0 128 128">
-                    <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
-                    <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
-                    <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path>
-                    <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
-                  </svg>
-                </div>
-                <div class="icon">
-                  <svg viewBox="0 0 128 128">
-                    <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path>
-                    <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path>
-                    <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"></path>
-                    <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path>
-                    <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"></path>
-                    <path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path>
-                  </svg>
-                </div>
-                <div class="icon">
-                  <svg viewBox="0 0 128 128">
-                    <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
-                    <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
-                  </svg>
-                </div>
-                <div class="icon">
-                  <svg viewBox="0 0 128 128">
-                    <path fill="url(#a)" d="M0 64c0 18.593 28.654 33.667 64 33.667 35.346 0 64-15.074 64-33.667 0-18.593-28.655-33.667-64-33.667C28.654 30.333 0 45.407 0 64Z"></path>
-                    <path fill="#777bb3" d="M64 95.167c33.965 0 61.5-13.955 61.5-31.167 0-17.214-27.535-31.167-61.5-31.167S2.5 46.786 2.5 64c0 17.212 27.535 31.167 61.5 31.167Z"></path>
-                    <path d="M34.772 67.864c2.793 0 4.877-.515 6.196-1.53 1.306-1.006 2.207-2.747 2.68-5.175.44-2.27.272-3.854-.5-4.71-.788-.874-2.493-1.317-5.067-1.317h-4.464l-2.473 12.732zM20.173 83.547a.694.694 0 0 1-.68-.828l6.557-33.738a.695.695 0 0 1 .68-.561h14.134c4.442 0 7.748 1.206 9.827 3.585 2.088 2.39 2.734 5.734 1.917 9.935-.333 1.711-.905 3.3-1.7 4.724a15.818 15.818 0 0 1-3.128 3.92c-1.531 1.432-3.264 2.472-5.147 3.083-1.852.604-4.232.91-7.07.91h-5.724l-1.634 8.408a.695.695 0 0 1-.682.562z"></path>
-                    <path fill="#fff" d="M34.19 55.826h3.891c3.107 0 4.186.682 4.553 1.089.607.674.723 2.097.331 4.112-.439 2.257-1.253 3.858-2.42 4.756-1.194.92-3.138 1.386-5.773 1.386h-2.786l2.205-11.342zm6.674-8.1H26.731a1.39 1.39 0 0 0-1.364 1.123L18.81 82.588a1.39 1.39 0 0 0 1.363 1.653h7.35a1.39 1.39 0 0 0 1.363-1.124l1.525-7.846h5.151c2.912 0 5.364-.318 7.287-.944 1.977-.642 3.796-1.731 5.406-3.237a16.522 16.522 0 0 0 3.259-4.087c.831-1.487 1.429-3.147 1.775-4.931.86-4.423.161-7.964-2.076-10.524-2.216-2.537-5.698-3.823-10.349-3.823zM30.301 68.557h4.471c2.963 0 5.17-.557 6.62-1.675 1.451-1.116 2.428-2.98 2.938-5.591.485-2.508.264-4.277-.665-5.308-.931-1.03-2.791-1.546-5.584-1.546h-5.036l-2.743 14.12m10.563-19.445c4.252 0 7.353 1.117 9.303 3.348 1.95 2.232 2.536 5.347 1.76 9.346-.322 1.648-.863 3.154-1.625 4.518-.764 1.366-1.76 2.614-2.991 3.747-1.468 1.373-3.097 2.352-4.892 2.935-1.794.584-4.08.875-6.857.875h-6.296l-1.743 8.97h-7.35l6.558-33.739h14.133"></path>
-                    <path d="M69.459 74.577a.694.694 0 0 1-.682-.827l2.9-14.928c.277-1.42.209-2.438-.19-2.87-.245-.263-.979-.704-3.15-.704h-5.256l-3.646 18.768a.695.695 0 0 1-.683.56h-7.29a.695.695 0 0 1-.683-.826l6.558-33.739a.695.695 0 0 1 .682-.561h7.29a.695.695 0 0 1 .683.826L64.41 48.42h5.653c4.307 0 7.227.758 8.928 2.321 1.733 1.593 2.275 4.14 1.608 7.573l-3.051 15.702a.695.695 0 0 1-.682.56h-7.407z"></path>
-                    <path fill="#fff" d="M65.31 38.755h-7.291a1.39 1.39 0 0 0-1.364 1.124l-6.557 33.738a1.39 1.39 0 0 0 1.363 1.654h7.291a1.39 1.39 0 0 0 1.364-1.124l3.537-18.205h4.682c2.168 0 2.624.463 2.641.484.132.14.305.795.019 2.264l-2.9 14.927a1.39 1.39 0 0 0 1.364 1.654h7.408a1.39 1.39 0 0 0 1.363-1.124l3.051-15.7c.715-3.686.103-6.45-1.82-8.217-1.836-1.686-4.91-2.505-9.398-2.505h-4.81l1.421-7.315a1.39 1.39 0 0 0-1.364-1.655zm0 1.39-1.743 8.968h6.496c4.087 0 6.907.714 8.457 2.14 1.553 1.426 2.017 3.735 1.398 6.93l-3.052 15.699h-7.407l2.901-14.928c.33-1.698.208-2.856-.365-3.474-.573-.617-1.793-.926-3.658-.926h-5.829l-3.756 19.327H51.46l6.558-33.739h7.292z"></path>
-                    <path d="M92.136 67.864c2.793 0 4.878-.515 6.198-1.53 1.304-1.006 2.206-2.747 2.679-5.175.44-2.27.273-3.854-.5-4.71-.788-.874-2.493-1.317-5.067-1.317h-4.463l-2.475 12.732zM77.54 83.547a.694.694 0 0 1-.682-.828l6.557-33.738a.695.695 0 0 1 .682-.561H98.23c4.442 0 7.748 1.206 9.826 3.585 2.089 2.39 2.734 5.734 1.917 9.935a15.878 15.878 0 0 1-1.699 4.724 15.838 15.838 0 0 1-3.128 3.92c-1.53 1.432-3.265 2.472-5.147 3.083-1.852.604-4.232.91-7.071.91h-5.723l-1.633 8.408a.695.695 0 0 1-.683.562z"></path>
-                    <path fill="#fff" d="M91.555 55.826h3.891c3.107 0 4.186.682 4.552 1.089.61.674.724 2.097.333 4.112-.44 2.257-1.254 3.858-2.421 4.756-1.195.92-3.139 1.386-5.773 1.386h-2.786l2.204-11.342zm6.674-8.1H84.096a1.39 1.39 0 0 0-1.363 1.123l-6.558 33.739a1.39 1.39 0 0 0 1.364 1.653h7.35a1.39 1.39 0 0 0 1.363-1.124l1.525-7.846h5.15c2.911 0 5.364-.318 7.286-.944 1.978-.642 3.797-1.731 5.408-3.238a16.52 16.52 0 0 0 3.258-4.086c.832-1.487 1.428-3.147 1.775-4.931.86-4.423.162-7.964-2.076-10.524-2.216-2.537-5.697-3.823-10.35-3.823zM87.666 68.557h4.47c2.964 0 5.17-.557 6.622-1.675 1.45-1.116 2.428-2.98 2.936-5.591.487-2.508.266-4.277-.665-5.308-.93-1.03-2.791-1.546-5.583-1.546h-5.035Zm10.563-19.445c4.251 0 7.354 1.117 9.303 3.348 1.95 2.232 2.537 5.347 1.759 9.346-.32 1.648-.862 3.154-1.624 4.518-.763 1.366-1.76 2.614-2.992 3.747-1.467 1.373-3.097 2.352-4.892 2.935-1.793.584-4.078.875-6.856.875h-6.295l-1.745 8.97h-7.35l6.558-33.739h14.133"></path>
-                    <defs>
-                      <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(84.04136 0 0 84.04136 38.426 42.169)" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#AEB2D5"></stop>
-                        <stop offset=".3" stop-color="#AEB2D5"></stop>
-                        <stop offset=".75" stop-color="#484C89"></stop>
-                        <stop offset="1" stop-color="#484C89"></stop>
-                      </radialGradient>
-                    </defs>
-                  </svg>
-                </div>
-                <div class="icon">
-                  <svg viewBox="0 0 128 128">
-                    <path fill="#f0513f" d="M27.271.11c-.2.078-5.82 3.28-12.487 7.112-8.078 4.644-12.227 7.09-12.449 7.32-.19.225-.34.482-.438.76-.167.564-.179 82.985-.01 83.578.061.23.26.568.44.754.436.46 48.664 28.19 49.25 28.324.272.065.577.054.88-.03.658-.165 48.76-27.834 49.188-28.286.175-.195.375-.532.44-.761.084-.273.115-4.58.115-13.655v-13.26l11.726-6.735c11.056-6.357 11.733-6.755 12.017-7.191l.29-.47V43.287c0-15.548.03-14.673-.585-15.235-.165-.146-5.798-3.433-12.53-7.31L100.89 13.71h-1.359l-11.963 6.87c-6.586 3.788-12.184 7.027-12.457 7.203-.272.18-.597.512-.73.753l-.242.417-.054 13.455-.048 13.46-9.879 5.69c-5.434 3.124-9.957 5.71-10.053 5.734-.175.049-.187-1.232-.187-25.966V15.293l-.26-.447c-.326-.545 1.136.324-13.544-8.114C27.803-.348 28.098-.2 27.27.11zm11.317 10.307c5.15 2.955 9.364 5.4 9.364 5.43 0 .031-4.516 2.641-10.035 5.813l-10.041 5.765-10.023-5.764c-5.507-3.173-10.02-5.783-10.02-5.814 0-.03 4.505-2.64 10.013-5.805l9.999-5.752.69.376c3.357 1.907 6.708 3.824 10.053 5.751zm71.668 13.261c5.422 3.122 9.908 5.702 9.95 5.744.114.103-19.774 11.535-20.046 11.523-.272-.008-19.915-11.335-19.907-11.473.01-.157 19.773-11.527 19.973-11.496.091.022 4.607 2.59 10.03 5.702zM16.3 25.328l9.558 5.503.055 27.247.05 27.252.233.368c.122.194.352.459.52.581.158.115 5.477 3.146 11.818 6.724l11.52 6.506v11.527c0 6.326-.043 11.516-.097 11.516-.041 0-10-5.699-22.124-12.676L5.793 97.201l-.03-38.966-.019-38.954.49.271c.283.15 4.807 2.748 10.065 5.775zm33.754 19.18v25.109l-.387.253c-.525.332-19.667 11.335-19.732 11.335-.03 0-.054-11.336-.054-25.193l.012-25.182 10-5.752c5.499-3.165 10.034-5.733 10.088-5.714.039.024.073 11.34.073 25.144zm38.15-5.775 10.023 5.763V55.92c0 10.838-.011 11.42-.176 11.357-.107-.041-4.642-2.64-10.083-5.774l-9.91-5.69v-11.42c0-6.287.032-11.424.062-11.424.043 0 4.577 2.592 10.084 5.764zm34.164 5.587c0 6.254-.042 11.412-.084 11.462-.072.115-19.896 11.538-20.022 11.538-.031 0-.062-5.135-.062-11.423v-11.42l10-5.756c5.507-3.16 10.042-5.752 10.084-5.752.053 0 .084 5.105.084 11.351zM95.993 70.933 52.005 96.04 32.056 84.693S76 59.277 76.176 59.343zm2.215 14.827-.034 11.442-22.028 12.676c-12.12 6.976-22.082 12.675-22.132 12.675-.053 0-.095-4.658-.095-11.516V99.51l22.08-12.592c12.132-6.923 22.101-12.59 22.154-12.602.043 0 .062 5.148.054 11.443z"></path>
-                  </svg>
-                </div>
-                <div class="icon">
-                  <svg viewBox="0 0 128 128">
-                    <g fill="#181616">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M64 1.512c-23.493 0-42.545 19.047-42.545 42.545 0 18.797 12.19 34.745 29.095 40.37 2.126.394 2.907-.923 2.907-2.047 0-1.014-.04-4.366-.058-7.92-11.837 2.573-14.334-5.02-14.334-5.02-1.935-4.918-4.724-6.226-4.724-6.226-3.86-2.64.29-2.586.29-2.586 4.273.3 6.523 4.385 6.523 4.385 3.794 6.504 9.953 4.623 12.38 3.536.383-2.75 1.485-4.628 2.702-5.69-9.45-1.075-19.384-4.724-19.384-21.026 0-4.645 1.662-8.44 4.384-11.42-.442-1.072-1.898-5.4.412-11.26 0 0 3.572-1.142 11.7 4.363 3.395-.943 7.035-1.416 10.65-1.432 3.616.017 7.258.49 10.658 1.432 8.12-5.504 11.688-4.362 11.688-4.362 2.316 5.86.86 10.187.418 11.26 2.728 2.978 4.378 6.774 4.378 11.42 0 16.34-9.953 19.938-19.427 20.99 1.526 1.32 2.886 3.91 2.886 7.88 0 5.692-.048 10.273-.048 11.674 0 1.13.766 2.458 2.922 2.04 16.896-5.632 29.07-21.574 29.07-40.365C106.545 20.56 87.497 1.512 64 1.512z"></path>
-                      <path d="M37.57 62.596c-.095.212-.428.275-.73.13-.31-.14-.482-.427-.382-.64.09-.216.424-.277.733-.132.31.14.486.43.38.642zM39.293 64.52c-.203.187-.6.1-.87-.198-.278-.297-.33-.694-.124-.884.208-.188.593-.1.87.197.28.3.335.693.123.884zm1.677 2.448c-.26.182-.687.012-.95-.367-.262-.377-.262-.83.005-1.013.264-.182.684-.018.95.357.262.385.262.84-.005 1.024zm2.298 2.368c-.233.257-.73.188-1.093-.163-.372-.343-.475-.83-.242-1.087.237-.257.736-.185 1.102.163.37.342.482.83.233 1.086zm3.172 1.374c-.104.334-.582.485-1.064.344-.482-.146-.796-.536-.7-.872.1-.336.582-.493 1.067-.342.48.144.795.53.696.87zm3.48.255c.013.35-.396.642-.902.648-.508.012-.92-.272-.926-.618 0-.354.4-.642.908-.65.506-.01.92.272.92.62zm3.24-.551c.06.342-.29.694-.793.787-.494.092-.95-.12-1.014-.46-.06-.35.297-.7.79-.792.503-.088.953.118 1.017.466zm0 0"></path>
-                    </g>
-                    <path d="M24.855 108.302h-10.7a.5.5 0 00-.5.5v5.232a.5.5 0 00.5.5h4.173v6.5s-.937.32-3.53.32c-3.056 0-7.327-1.116-7.327-10.508 0-9.393 4.448-10.63 8.624-10.63 3.614 0 5.17.636 6.162.943.31.094.6-.216.6-.492l1.193-5.055a.468.468 0 00-.192-.39c-.403-.288-2.857-1.66-9.058-1.66-7.144 0-14.472 3.038-14.472 17.65 0 14.61 8.39 16.787 15.46 16.787 5.854 0 9.405-2.502 9.405-2.502.146-.08.162-.285.162-.38v-16.316a.5.5 0 00-.5-.5zM79.506 94.81H73.48a.5.5 0 00-.498.503l.002 11.644h-9.392V95.313a.5.5 0 00-.497-.503H57.07a.5.5 0 00-.498.503v31.53c0 .277.224.503.498.503h6.025a.5.5 0 00.497-.504v-13.486h9.392l-.016 13.486c0 .278.224.504.5.504h6.038a.5.5 0 00.497-.504v-31.53a.497.497 0 00-.497-.502zm-47.166.717c-2.144 0-3.884 1.753-3.884 3.923 0 2.167 1.74 3.925 3.884 3.925 2.146 0 3.885-1.758 3.885-3.925 0-2.17-1.74-3.923-3.885-3.923zm2.956 9.608H29.29c-.276 0-.522.284-.522.56v20.852c0 .613.382.795.876.795h5.41c.595 0 .74-.292.74-.805v-20.899a.5.5 0 00-.498-.502zm67.606.047h-5.98a.5.5 0 00-.496.504v15.46s-1.52 1.11-3.675 1.11-2.727-.977-2.727-3.088v-13.482a.5.5 0 00-.497-.504h-6.068a.502.502 0 00-.498.504v14.502c0 6.27 3.495 7.804 8.302 7.804 3.944 0 7.124-2.18 7.124-2.18s.15 1.15.22 1.285c.07.136.247.273.44.273l3.86-.017a.502.502 0 00.5-.504l-.003-21.166a.504.504 0 00-.5-.502zm16.342-.708c-3.396 0-5.706 1.515-5.706 1.515V95.312a.5.5 0 00-.497-.503H107a.5.5 0 00-.5.503v31.53a.5.5 0 00.5.503h4.192c.19 0 .332-.097.437-.268.103-.17.254-1.454.254-1.454s2.47 2.34 7.148 2.34c5.49 0 8.64-2.784 8.64-12.502s-5.03-10.988-8.428-10.988zm-2.36 17.764c-2.073-.063-3.48-1.004-3.48-1.004v-9.985s1.388-.85 3.09-1.004c2.153-.193 4.228.458 4.228 5.594 0 5.417-.935 6.486-3.837 6.398zm-63.689-.118c-.263 0-.937.107-1.63.107-2.22 0-2.973-1.032-2.973-2.368v-8.866h4.52a.5.5 0 00.5-.504v-4.856a.5.5 0 00-.5-.502h-4.52l-.007-5.97c0-.227-.116-.34-.378-.34h-6.16c-.238 0-.367.106-.367.335v6.17s-3.087.745-3.295.805a.5.5 0 00-.36.48v3.877a.5.5 0 00.497.503h3.158v9.328c0 6.93 4.86 7.61 8.14 7.61 1.497 0 3.29-.48 3.586-.59.18-.067.283-.252.283-.453l.004-4.265a.51.51 0 00-.5-.502z" fill="#100E0F"></path>
-                  </svg>
-                </div>
-                <div class="icon">             
-                  <svg viewBox="0 0 128 128">
-                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#3A4D54" d="M73.8 50.8h11.3v11.5h5.7c2.6 0 5.3-.5 7.8-1.3 1.2-.4 2.6-1 3.8-1.7-1.6-2.1-2.4-4.7-2.6-7.3-.3-3.5.4-8.1 2.8-10.8l1.2-1.4 1.4 1.1c3.6 2.9 6.5 6.8 7.1 11.4 4.3-1.3 9.3-1 13.1 1.2l1.5.9-.8 1.6c-3.2 6.2-9.9 8.2-16.4 7.8-9.8 24.3-31 35.8-56.8 35.8-13.3 0-25.5-5-32.5-16.8l-.1-.2-1-2.1c-2.4-5.2-3.1-10.9-2.6-16.6l.2-1.7h9.6V50.8h11.3V39.6h22.5V28.3h13.5v22.5z"></path><path fill="#00AADA" d="M110.4 55.1c.8-5.9-3.6-10.5-6.4-12.7-3.1 3.6-3.6 13.2 1.3 17.2-2.8 2.4-8.5 4.7-14.5 4.7H18.6c-.6 6.2.5 11.9 3 16.8l.8 1.5c.5.9 1.1 1.7 1.7 2.6 3 .2 5.7.3 8.2.2 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5 1.1-8.3 1.3h-.6c-1.3.1-2.7.1-4.2.1-1.6 0-3.1 0-4.9-.1 6 6.8 15.4 10.8 27.2 10.8 25 0 46.2-11.1 55.5-35.9 6.7.7 13.1-1 16-6.7-4.5-2.7-10.5-1.8-13.9-.1z"></path><path fill="#28B8EB" d="M110.4 55.1c.8-5.9-3.6-10.5-6.4-12.7-3.1 3.6-3.6 13.2 1.3 17.2-2.8 2.4-8.5 4.7-14.5 4.7h-68c-.3 9.5 3.2 16.7 9.5 21 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.5 1.4l-.1-.1c8.5 4.4 20.8 4.3 35-1.1 15.8-6.1 30.6-17.7 40.9-30.9-.2.1-.4.1-.5.2z"></path><path fill="#028BB8" d="M18.7 71.8c.4 3.3 1.4 6.4 2.9 9.3l.8 1.5c.5.9 1.1 1.7 1.7 2.6 3 .2 5.7.3 8.2.2 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.5 1.4h-.4c-1.3.1-2.7.1-4.1.1-1.6 0-3.2 0-4.9-.1 6 6.8 15.5 10.8 27.3 10.8 21.4 0 40-8.1 50.8-26H18.7v-.1z"></path><path fill="#019BC6" d="M23.5 71.8c1.3 5.8 4.3 10.4 8.8 13.5 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.6 1.4 8.5 4.4 20.8 4.3 34.9-1.1 8.5-3.3 16.8-8.2 24.2-14.1H23.5z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#00ACD3" d="M28.4 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm3-12h9.8v9.8h-9.8v-9.8zm.9.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#23C2EE" d="M39.6 52.7h9.8v9.8h-9.8v-9.8zm.9.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#00ACD3" d="M50.9 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#23C2EE" d="M50.9 41.5h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm3.1 10.4H72v9.8h-9.8v-9.8zm.8.8h.8v8.1H63v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#00ACD3" d="M62.2 41.5H72v9.8h-9.8v-9.8zm.8.8h.8v8.1H63v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#23C2EE" d="M62.2 30.2H72V40h-9.8v-9.8zm.8.8h.8v8.1H63V31zm1.5 0h.8v8.1h-.8V31zm1.4 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#00ACD3" d="M73.5 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#D4EEF1" d="M48.8 78.3c1.5 0 2.7 1.2 2.7 2.7 0 1.5-1.2 2.7-2.7 2.7-1.5 0-2.7-1.2-2.7-2.7 0-1.5 1.2-2.7 2.7-2.7"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#3A4D54" d="M48.8 79.1c.2 0 .5 0 .7.1-.2.1-.4.4-.4.7 0 .4.4.8.8.8.3 0 .6-.2.7-.4.1.2.1.5.1.7 0 1.1-.9 1.9-1.9 1.9-1.1 0-1.9-.9-1.9-1.9 0-1 .8-1.9 1.9-1.9M1.1 72.8h125.4c-2.7-.7-8.6-1.6-7.7-5.2-5 5.7-16.9 4-20 1.2-3.4 4.9-23 3-24.3-.8-4.2 5-17.3 5-21.5 0-1.4 3.8-21 5.7-24.3.8-3 2.8-15 4.5-20-1.2 1.1 3.5-4.9 4.5-7.6 5.2"></path><path fill="#BFDBE0" d="M56 97.8c-6.7-3.2-10.3-7.5-12.4-12.2-2.5.7-5.5 1.2-8.9 1.4-1.3.1-2.7.1-4.1.1-1.7 0-3.4 0-5.2-.1 6 6 13.6 10.7 27.5 10.8H56z"></path><path fill="#D4EEF1" d="M46.1 89.9c-.9-1.3-1.8-2.8-2.5-4.3-2.5.7-5.5 1.2-8.9 1.4 2.3 1.2 5.7 2.4 11.4 2.9z"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-    </section>
-    <!-- 開発中 -->
-    <section id="works" class="mx-auto max-w-7xl px-6 py-16">
-      <h2 class="text-2xl font-bold text-center">開発中</h2>
-      <p class="mt-3 text-center text-[#11151b]">現在開発中のプロジェクト</p>
 
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <?php for ($i = 1; $i <= 3; $i++): ?>
-          <article class="rounded-xl overflow-hidden bg-[#f8fafc] shadow-md">
-            <div class="h-40 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/800x600/?web,design&sig={{ $i }}')"></div>
-            <div class="p-5">
-              <h3 class="font-semibold">Project</h3>
-              <p class="mt-2 text-sm text-[#11151b]">短い説明文：UI設計とフロントエンド実装を担当したサンプルプロジェクトです。</p>
-              <div class="mt-4 flex items-center justify-between">
-                <div class="text-xs text-[#11151b]">#UI #Frontend</div>
-                <a href="#" class="text-sm text-[#232b37] hover:underline">View</a>
+    <!-- Service Section -->
+    <section id="service" class="relative w-full bg-gradient-to-br from-blue-50 via-purple-50 to-white py-20">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+        <div class="absolute bottom-0 left-1/3 w-80 h-80 bg-gradient-to-tl from-purple-200 to-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-6">
+        <div class="mb-16">
+          <h2 class="text-4xl font-bold text-gray-800">Services</h2>
+          <p class="mt-4 text-lg text-gray-600">提供するサービス</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Main Service Card -->
+          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-blue-100/50">
+ 
+            <!-- Services Grid -->
+            <div class="p-8 md:p-12">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Web Development Service -->
+                <div class="flex flex-col items-center text-center">
+                  <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mb-4 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4m0 0l1 12m-17 0a2 2 0 002 2h12a2 2 0 002-2m0-12V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14z"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-2xl font-bold text-gray-800 mb-3">Web開発事業</h4>
+                  <p class="text-gray-700 leading-relaxed">
+                    モダンで使いやすいWebアプリケーション・Webサイトの設計と実装。React、PHP、Tailwind CSSなどの最新技術を活用します。
+                  </p>
+                </div>
+
+                <!-- Coaching Service -->
+                <div class="flex flex-col items-center text-center">
+                  <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-2xl font-bold text-gray-800 mb-3">未経験者コーチング</h4>
+                  <p class="text-gray-700 leading-relaxed">
+                    Web開発を始めたばかりの方向けの個別・グループコーチング。実務的なスキルとキャリア形成をサポートします。
+                  </p>
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <div class="flex justify-center pt-8 border-t border-gray-200">
+                <a href="service.php" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-10 py-4 hover:shadow-lg transition-shadow text-lg">
+                  サービス詳細を見る
+                  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                  </svg>
+                </a>
               </div>
             </div>
-          </article>
-        <?php endfor; ?>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="relative w-full bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-200 to-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+        <div class="absolute bottom-10 left-1/4 w-80 h-80 bg-gradient-to-tr from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-6">
+        <div class="mb-16">
+          <h2 class="text-4xl font-bold text-gray-800">Skills</h2>
+          <p class="mt-4 text-lg text-gray-600">使用技術と得意分野</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+          <div class="flex justify-center">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-blue-100/50">
+              <svg viewBox="0 0 128 128" class="w-12 h-12">
+                <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
+                <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-blue-100/50">
+              <svg viewBox="0 0 128 128" class="w-12 h-12">
+                <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-blue-100/50">
+              <svg viewBox="0 0 128 128" class="w-12 h-12">
+                <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-blue-100/50">
+              <svg viewBox="0 0 128 128" class="w-12 h-12">
+                <path fill="#777bb3" d="M64 95.167c33.965 0 61.5-13.955 61.5-31.167 0-17.214-27.535-31.167-61.5-31.167S2.5 46.786 2.5 64c0 17.212 27.535 31.167 61.5 31.167Z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-blue-100/50">
+              <svg viewBox="0 0 128 128" class="w-12 h-12">
+                <path fill="#f0513f" d="M27.271.11c-.2.078-5.82 3.28-12.487 7.112-8.078 4.644-12.227 7.09-12.449 7.32-.19.225-.34.482-.438.76-.167.564-.179 82.985-.01 83.578.061.23.26.568.44.754.436.46 48.664 28.19 49.25 28.324.272.065.577.054.88-.03.658-.165 48.76-27.834 49.188-28.286.175-.195.375-.532.44-.761.084-.273.115-4.58.115-13.655v-13.26l11.726-6.735c11.056-6.357 11.733-6.755 12.017-7.191l.29-.47V43.287c0-15.548.03-14.673-.585-15.235-.165-.146-5.798-3.433-12.53-7.31L100.89 13.71h-1.359l-11.963 6.87c-6.586 3.788-12.184 7.027-12.457 7.203-.272.18-.597.512-.73.753l-.242.417-.054 13.455-.048 13.46-9.879 5.69c-5.434 3.124-9.957 5.71-10.053 5.734-.175.049-.187-1.232-.187-25.966V15.293l-.26-.447c-.326-.545 1.136.324-13.544-8.114C27.803-.348 28.098-.2 27.27.11z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-blue-100/50">
+              <svg viewBox="0 0 128 128" class="w-12 h-12">
+                <g fill="#181616">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M64 1.512c-23.493 0-42.545 19.047-42.545 42.545 0 18.797 12.19 34.745 29.095 40.37 2.126.394 2.907-.923 2.907-2.047 0-1.014-.04-4.366-.058-7.92-11.837 2.573-14.334-5.02-14.334-5.02-1.935-4.918-4.724-6.226-4.724-6.226-3.86-2.64.29-2.586.29-2.586 4.273.3 6.523 4.385 6.523 4.385 3.794 6.504 9.953 4.623 12.38 3.536.383-2.75 1.485-4.628 2.702-5.69-9.45-1.075-19.384-4.724-19.384-21.026 0-4.645 1.662-8.44 4.384-11.42-.442-1.072-1.898-5.4.412-11.26 0 0 3.572-1.142 11.7 4.363 3.395-.943 7.035-1.416 10.65-1.432 3.616.017 7.258.49 10.658 1.432 8.12-5.504 11.688-4.362 11.688-4.362 2.316 5.86.86 10.187.418 11.26 2.728 2.978 4.378 6.774 4.378 11.42 0 16.34-9.953 19.938-19.427 20.99 1.526 1.32 2.886 3.91 2.886 7.88 0 5.692-.048 10.273-.048 11.674 0 1.13.766 2.458 2.922 2.04 16.896-5.632 29.07-21.574 29.07-40.365C106.545 20.56 87.497 1.512 64 1.512z"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- In Development -->
+    <section class="relative w-full bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+        <div class="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-purple-300 to-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-6">
+        <div class="mb-16">
+          <h2 class="text-4xl font-bold text-gray-800">Currently Developing</h2>
+          <p class="mt-4 text-lg text-gray-600">現在開発中のプロジェクト</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <?php for ($i = 1; $i <= 3; $i++): ?>
+            <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-blue-100/50">
+              <div class="h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" style="background-image: url('https://source.unsplash.com/800x600/?web,design&sig=<?php echo 10 + $i; ?>');"></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800">Project <?php echo $i; ?></h3>
+                <p class="mt-3 text-sm text-gray-600 leading-relaxed">UI設計とフロントエンド実装を担当したプロジェクト。モダンで使いやすいインターフェースを実現しています。</p>
+                <div class="mt-6 flex items-center justify-between">
+                  <div class="flex gap-2 flex-wrap">
+                    <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">UI</span>
+                    <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">Frontend</span>
+                  </div>
+                  <a href="#" class="text-sm font-semibold text-blue-600 hover:text-purple-600 transition-colors">View →</a>
+                </div>
+              </div>
+            </article>
+          <?php endfor; ?>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="mx-auto max-w-3xl px-6 py-16">
-      <div class="bg-[#f8fafc] rounded-2xl p-8">
-        <h2 class="text-xl font-bold">Contact</h2>
-        <p class="mt-3 text-[#11151b]">案件のご相談やご質問は下記のメールまたはSNSからご連絡ください。</p>
+    <section id="contact" class="relative w-full bg-gradient-to-br from-purple-100 via-blue-50 to-blue-100 py-20">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-10 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-300 to-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-10 left-1/4 w-96 h-96 bg-gradient-to-tr from-blue-300 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+      </div>
 
-        <div class="mt-6">
-          <a href="mailto:you@example.com" class="inline-flex items-center gap-2 rounded-lg bg-[#232b37] text-white px-4 py-2">メールで連絡</a>
+      <div class="relative z-10 mx-auto max-w-3xl px-6">
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-blue-100/50">
+          <div class="bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-12 text-center text-white">
+            <h2 class="text-4xl font-bold">Contact Me</h2>
+            <p class="mt-3 text-lg opacity-90">案件のご相談やご質問はお気軽にご連絡ください</p>
+          </div>
+
+          <div class="p-8 md:p-12">
+            <p class="text-gray-700 text-center mb-8">以下のメールまたはSNSからご連絡ください。</p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a href="mailto:you@example.com" class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-8 py-3 hover:shadow-lg transition-shadow">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                メールで連絡
+              </a>
+              <a href="https://x.com/Take227389Take" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-blue-500 text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                SNS
+              </a>
+            </div>
+
+            <div class="pt-6 border-t border-gray-200">
+              <p class="text-xs text-gray-500 text-center">通常24時間以内にご返信いたします</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="mt-12 border-t border-[#e5e7eb]">
-    <div class="mx-auto max-w-7xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="text-sm text-[#11151b]">©2025 All rights reserved.</div>
-
-      <div class="flex items-center gap-4">
-        <a href="#" class="text-[#232b37] hover:underline">Qiita</a>
-        <a href="#" class="text-[#232b37] hover:underline">GitHub</a>
-        <a href="#" class="text-[#232b37] hover:underline">Zenn</a>
+  <footer class="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-white">
+    <div class="mx-auto max-w-7xl px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">MyPortfolio</h3>
+          <p class="text-gray-400 text-sm">Web開発とエンジニアコーチングで、あなたのビジョンを実現します。</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <div class="space-y-2">
+            <a href="#works" class="text-gray-400 hover:text-blue-400 transition-colors text-sm block">Works</a>
+            <a href="#service" class="text-gray-400 hover:text-blue-400 transition-colors text-sm block">Service</a>
+            <a href="#contact" class="text-gray-400 hover:text-blue-400 transition-colors text-sm block">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Follow</h4>
+          <div class="flex gap-4">
+            <a href="https://qiita.com/take006" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-colors">Qiita</a>
+            <a href="https://github.com/take006" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-colors">GitHub</a>
+            <a href="https://zenn.dev/nnez_wa" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-colors">Zenn</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-gray-400">©2025 Takemoto Yuya. All rights reserved.</div>
+        <div class="text-xs text-gray-500">Designed with 💙 and built with modern web technologies</div>
       </div>
     </div>
   </footer>
