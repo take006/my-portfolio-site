@@ -17,14 +17,48 @@
       <nav class="flex items-center justify-between">
         <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">MyPortfolio</a>
 
-        <div class="space-x-8">
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
           <a href="#works" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Works</a>
           <a href="#service" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Service</a>
           <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </nav>
     </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-blue-100/50">
+      <div class="mx-auto max-w-7xl px-6 py-4 space-y-4">
+        <a href="#works" class="block text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Works</a>
+        <a href="#service" class="block text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Service</a>
+        <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Contact</a>
+      </div>
+    </div>
   </header>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when link is clicked
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 
   <!-- Hero Section with Profile -->
   <main>
@@ -44,7 +78,7 @@
             <!-- Left Side: Text Content -->
             <div class="flex flex-col justify-center">
               <div class="mb-8">
-                <h1 class="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-6xl font-bold text-gray-800 leading-loose mb-4">
                   Web開発受託と<br />
                   <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">未経験エンジニア向け</span><br />
                   コーチング
@@ -83,7 +117,7 @@
                   <!-- Profile Info -->
                   <div class="text-center">
                     <h2 class="text-3xl font-bold text-gray-800 mb-2">Takemoto Yuya</h2>
-                    <p class="text-blue-600 font-semibold mb-4">📍 Osaka, Japan</p>
+                    <p class="text-gray-600 mb-4">📍 Osaka, Japan</p>
                     
                     <!-- Bio -->
                     <p class="text-gray-700 text-sm leading-relaxed mb-6">
@@ -120,7 +154,7 @@
       </div>
 
       <div class="relative z-10 mx-auto max-w-7xl px-6">
-        <div class="mb-16">
+        <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-gray-800">Works</h2>
           <p class="mt-4 text-lg text-gray-600">最近の制作事例を３つ掲載しています。</p>
         </div>
@@ -181,7 +215,7 @@
       </div>
 
       <div class="relative z-10 mx-auto max-w-7xl px-6">
-        <div class="mb-16">
+        <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-gray-800">Services</h2>
           <p class="mt-4 text-lg text-gray-600">提供するサービス</p>
         </div>
@@ -244,7 +278,7 @@
       </div>
 
       <div class="relative z-10 mx-auto max-w-7xl px-6">
-        <div class="mb-16">
+        <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-gray-800">Skills</h2>
           <p class="mt-4 text-lg text-gray-600">使用技術と得意分野</p>
         </div>
@@ -307,7 +341,7 @@
       </div>
 
       <div class="relative z-10 mx-auto max-w-7xl px-6">
-        <div class="mb-16">
+        <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-gray-800">Currently Developing</h2>
           <p class="mt-4 text-lg text-gray-600">現在開発中のプロジェクト</p>
         </div>
