@@ -183,7 +183,6 @@
       </div>
       <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="text-sm text-gray-400">©2025 Takemoto Yuya. All rights reserved.</div>
-        <div class="text-xs text-gray-500">Designed with 💙 and built with modern web technologies</div>
       </div>
     </div>
   </footer>
