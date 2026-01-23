@@ -71,13 +71,6 @@
           <?php
           $works = [
             [
-              'title' => 'コーポレートサイト',
-              'description' => 'アルテラス株式会社のコーポレートサイトです',
-              'url' => 'https://alterrace.take006.com',
-              'thumbnail' => 'pages/portfolio/thumbnail.jpg',
-              'tags' => ['PHP']
-            ],
-            [
               'title' => 'Etude',
               'description' => 'WordPressのオリジナルテーマで開発したテックブログ',
               'url' => 'https://blog.take006.com',
@@ -90,6 +83,13 @@
               'url' => 'https://learning.take006.com',
               'thumbnail' => 'pages/learning/thumbnail.jpg',
               'tags' => ['PHP', 'Tailwind']
+            ],
+            [
+              'title' => 'コーポレートサイト',
+              'description' => '※現在開発中',
+              'url' => 'https://alterrace.take006.com',
+              'thumbnail' => 'pages/portfolio/thumbnail.jpg',
+              'tags' => ['PHP']
             ]
           ];
 
