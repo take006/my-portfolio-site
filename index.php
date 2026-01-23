@@ -21,39 +21,50 @@
   <!-- Hero Section with Profile -->
   <main>
     <!-- Hero Section: white top-half -->
-    <section class="relative w-full min-h-[60vh] bg-white flex items-center justify-center pt-28 pb-16 border-b border-gray-100">
-      <div class="relative z-10 mx-auto max-w-6xl px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div class="space-y-6 text-center lg:text-left">
-            <p class="text-xs tracking-[0.3em] uppercase text-gray-500">Portfolio</p>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">Takemoto Yuya</h1>
-            <p class="text-base md:text-lg text-gray-700 leading-relaxed">Web開発を専門とするエンジニア。独学でプログラミングを習得しWebサイトやWebアプリケーション開発行っています。</p>
-            <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">HTML</span>
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">CSS</span>
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">JavaScript</span>
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">PHP</span>
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">Git</span>
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">WordPress</span>
-            </div>
-          </div>
-
-          <div class="flex justify-center lg:justify-end">
-            <div class="w-full max-w-sm">
-              <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-8">
-                <div class="flex justify-center mb-6">
-                  <div class="relative">
-                    <div class="profile-image w-40 h-40 rounded-full overflow-hidden border-4 border-blue-200 shadow-lg">
-                      <img src="images/googlemegane.png" alt="Takemoto Yuya" class="w-full h-full object-cover">
-                    </div>
-                  </div>
-                </div>
-                <div class="text-center space-y-2">
-                  <p class="text-sm text-gray-500">Full Stack Developer</p>
-                  <p class="text-sm text-gray-500">Osaka, Japan</p>
-                </div>
+    <section class="relative w-full min-h-screen bg-gradient-to-br from-gray-50 to-gray-50 flex items-center justify-center py-8 border-b border-gray-100">
+      <div class="relative z-10 mx-auto max-w-2xl px-6 w-full">
+        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 md:p-12 space-y-6 text-center">
+          <p class="text-xs tracking-[0.3em] uppercase text-gray-500">Portfolio</p>
+          
+          <div class="flex justify-center">
+            <div class="relative">
+              <div class="profile-image w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-blue-200 shadow-lg">
+                <img src="images/googlemegane.png" alt="Takemoto Yuya" class="w-full h-full object-cover">
               </div>
             </div>
+          </div>
+          
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">Takemoto Yuya</h1>
+          
+          <div class="space-y-1">
+            <p class="text-sm text-gray-500">Full Stack Developer</p>
+            <p class="text-sm text-gray-500">Osaka, Japan</p>
+          </div>
+          
+          <p class="text-sm md:text-base text-gray-700 leading-relaxed">Web開発を専門とするエンジニア。独学でプログラミングを習得しWebサイトやWebアプリケーション開発行っています。</p>
+          
+          <div class="space-y-4">
+            <div>
+              <p class="text-xs tracking-wider text-gray-600 mb-3 font-semibold">Skills</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">HTML</span>
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">CSS</span>
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">JavaScript</span>
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">PHP</span>
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">Git</span>
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">WordPress</span>
+              </div>
+            </div>
+            
+            <!-- <div>
+              <p class="text-xs tracking-wider text-gray-600 mb-3 font-semibold">Learning Now</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-50 text-gray-400 rounded-full text-xs font-semibold">Java</span>
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-50 text-gray-400 rounded-full text-xs font-semibold">Laravel</span>
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-50 text-gray-400 rounded-full text-xs font-semibold">AWS</span>
+                <span class="inline-flex items-center px-3 py-1.5 bg-gray-50 text-gray-400 rounded-full text-xs font-semibold">React</span>
+              </div>
+            </div> -->
           </div>
         </div>
       </div>
