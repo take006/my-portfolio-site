@@ -158,11 +158,13 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="mailto:take088917761@gmail.com" class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-8 py-3 hover:shadow-lg transition-shadow">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                メールで連絡
+                メール
               </a>
               <a href="https://x.com/Take227389Take" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-blue-500 text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-                SNS
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2H21l-6.68 7.634L22 22h-6.094l-4.773-6.237L5.47 22H2.713l7.147-8.173L2 2h6.25l4.314 5.688L18.244 2z"/>
+                </svg>
+                
               </a>
             </div>
 
@@ -193,7 +195,7 @@
         </div>
       </div>
       <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="text-sm text-gray-400">©2025 Takemoto Yuya. All rights reserved.</div>
+        <div class="text-sm text-gray-400">©2025 MyPortfolio. All rights reserved.</div>
       </div>
     </div>
   </footer>
