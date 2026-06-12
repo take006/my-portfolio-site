@@ -37,11 +37,11 @@
           <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">Takemoto Yuya</h1>
           
           <div class="space-y-1">
-            <p class="text-sm text-gray-500">Full Stack Developer</p>
+            <p class="text-sm text-gray-500">Programmer</p>
             <p class="text-sm text-gray-500">Osaka, Japan</p>
           </div>
           
-          <p class="text-sm md:text-base text-gray-700 leading-relaxed">Web開発を専門とするエンジニア。独学でプログラミングを習得しWebサイトやWebアプリケーション開発行っています。</p>
+          <p class="text-sm md:text-base text-gray-700 leading-relaxed">独学でプログラミングを習得しWebサイトやWebアプリケーション開発行っています。</p>
           
           <div class="space-y-4">
             <div>
@@ -55,16 +55,6 @@
                 <span class="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-800 rounded-full text-xs font-semibold">WordPress</span>
               </div>
             </div>
-            
-            <!-- <div>
-              <p class="text-xs tracking-wider text-gray-600 mb-3 font-semibold">Learning Now</p>
-              <div class="flex flex-wrap gap-2 justify-center">
-                <span class="inline-flex items-center px-3 py-1.5 bg-gray-50 text-gray-400 rounded-full text-xs font-semibold">Java</span>
-                <span class="inline-flex items-center px-3 py-1.5 bg-gray-50 text-gray-400 rounded-full text-xs font-semibold">Laravel</span>
-                <span class="inline-flex items-center px-3 py-1.5 bg-gray-50 text-gray-400 rounded-full text-xs font-semibold">AWS</span>
-                <span class="inline-flex items-center px-3 py-1.5 bg-gray-50 text-gray-400 rounded-full text-xs font-semibold">React</span>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -75,7 +65,6 @@
       <div class="relative z-10 mx-auto max-w-6xl px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Works</h2>
-          <p class="mt-3 text-base md:text-lg text-gray-600">最近の制作事例を３つ掲載しています。</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -94,13 +83,6 @@
               'url' => 'https://learning.take006.com',
               'thumbnail' => 'pages/learning/thumbnail.jpg',
               'tags' => ['PHP', 'Tailwind']
-            ],
-            [
-              'title' => 'コーポレートサイト',
-              'description' => '※現在開発中',
-              'url' => 'https://alterrace.take006.com',
-              'thumbnail' => 'pages/portfolio/thumbnail.jpg',
-              'tags' => ['PHP']
             ]
           ];
 
